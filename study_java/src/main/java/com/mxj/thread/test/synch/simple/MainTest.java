@@ -1,4 +1,4 @@
-package com.mxj.thread.test.synch;
+package com.mxj.thread.test.synch.simple;
 
 public class MainTest {
 	
