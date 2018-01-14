@@ -6,6 +6,9 @@ import java.util.concurrent.Executors;
 public class FixedThreadPoolTest {
 
 	public static void main(String[] args) {
+		
+		
+		
 		ExecutorService pool = Executors.newFixedThreadPool(2);
 		pool.execute(new Runnable() {
 			public void run() {

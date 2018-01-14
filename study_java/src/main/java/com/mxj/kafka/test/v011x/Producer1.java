@@ -31,17 +31,16 @@ public class Producer1 {
 		 props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");//序列化类
 		 props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");//序列化类
 		 props.put("max.request.size", 50);
-		 props.put("acks", "-1");
-		 props.put("metric.reporters", "org.apache.kafka.common.metrics.JmxReporter");
+//		 props.put("metric.reporters", "org.apache.kafka.common.metrics.JmxReporter");
 		 
 		 Logger logger = LoggerFactory.getLogger(Producer1.class);
 		 
 		 
-		 Producer<String, String> producer = new KafkaProducer<>(props);
+		 Producer<String, String> producer = new KafkaProducer<String, String>(props);
 			while(true){
 			 int i=ThreadLocalRandom.current().nextInt(50000000);
 			
-			 logger.info("key v:"+i);
+			 logger.info("key=========:"+i);
 			 
 			 String key="k"+Integer.toString(i);
 			 String value="v"+Integer.toString(i);
